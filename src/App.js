@@ -14,6 +14,7 @@ const App = () => {
     "?",
     "?"
   ])
+
   const [treasureLocation, setTreasureLocation] = useState(Math.floor(Math.random() * board.length))
   
   const [bombLocation, setBombLocation] = useState(Math.floor(Math.random() * board.length))
@@ -36,6 +37,7 @@ const App = () => {
       updatedBoard[index] = "🏝️"
     setBoard(updatedBoard)}
   }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -45,8 +47,10 @@ const App = () => {
           <Square 
             value={value}
             key={index}
+
             index={index}
             handleGameplay={handleGameplay}
+
             />
           )
         })}
